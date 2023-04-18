@@ -1,0 +1,9 @@
+server:
+  port: 8831
+spring:
+  application:
+    name: shoppingspringboot-openfeign-interface-service
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 127.0.0.1:3333
