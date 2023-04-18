@@ -10,6 +10,7 @@
     <version>1.0-SNAPSHOT</version>
     <modules>
         <module>springboot-rocketmq-producer</module>
+        <module>springboot-rocketmq-consumer</module>
     </modules>
 
     <!-- 统一管理jar包版本 -->

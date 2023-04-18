@@ -6,6 +6,8 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 
 import javax.annotation.Resource;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 
 /**
  * @author Gzy
@@ -23,7 +25,8 @@ public class ProducerTest {
     @Test
     public void testSendMessage(){
         //topic,message Object
-        rocketMQTemplate.convertAndSend("springboot-rocketmq","testSendMessageBody");
+        rocketMQTemplate.convertAndSend("springboot-rocketmq","testSendMessageBody,发送时间:" +
+                new SimpleDateFormat("yyyy-MM-dd HH:mm:SS").format(new Date()));
         System.out.println("消息发送成功");
     }
 
