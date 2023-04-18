@@ -1,0 +1,21 @@
+server:
+  port: 8811
+spring:
+  application:
+    name: shoppingspringboot-rocketmq-producer-service
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource
+    druid:
+      driver-class-name: com.mysql.cj.jdbc.Driver
+      url: jdbc:mysql://localhost:3306/db01?useUnicode=true&character=UTF-8&serverTimezone=UTC&useSSL=false
+      username: root
+      password: syq
+mybatis:
+  mapper-locations: classpath:mapper/*.xml
+  type-aliases-package: com.my.shopping.entity
+rocketmq:
+  #nameserver（单机/集群）地址 + 端口
+  name-server: 192.168.50.148:9876;192.168.50.149:9876
+  producer:
+    #生产者群组
+    group: ShoppingProducerGroup
